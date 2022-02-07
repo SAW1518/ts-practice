@@ -7,35 +7,35 @@ enum PhotoOrientation {
 
 class Picture {
     // Proprieties
-    id: number
-    title: string
-    orientation: PhotoOrientation
+    public id: number
+    public title: string
+    public orientation: PhotoOrientation
 
-    constructor(id: number, title: string, orientation: PhotoOrientation) {
+    public constructor(id: number, title: string, orientation: PhotoOrientation) {
         this.id = id
         this.title = title
         this.orientation = orientation
     }
 
 
-    toString(){
+    public toString(){
         return `id: ${this.id} , title: ${this.title} ,orientation: ${this.orientation}`
     }
 
 }
 // behaviour
 class Album {
-    id: number
-    title: string
-    picture : Picture[]
+    public id: number
+    public title: string
+    public picture : Picture[]
 
-    constructor(id:number, title:string ) {
+    public constructor(id:number, title:string ) {
         this.id = id
         this.title = title
         this.picture = []
     }
 
-    addPicture(picture: Picture){
+    public addPicture(picture: Picture){
        this.picture.push(picture)
     }
 }
@@ -47,6 +47,12 @@ album.addPicture(picture)
 
 console.log('album', album)
 
+
+//Accessing to public variables
+picture.id = 100 // public
+picture.title = 'title' // public
+album.title = 'pWDA' // public
+console.log('album=>',album)
 
 
 

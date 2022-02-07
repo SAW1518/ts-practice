@@ -12,6 +12,7 @@
 /build
 /.idea
 /dist
+./types-typesript/dist
 
 # misc
 .DS_Store
